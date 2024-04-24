@@ -19,7 +19,7 @@
     <body>
 
         <div class="row">
-            <div class="image-container"><img src="img/cir.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="circle_id" src="img/cir.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/tri.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/squ.png" height="200" width="200"/></div>
         </div>
@@ -39,3 +39,19 @@
     </body>
     
 </html>
+
+<script>
+    const bonk_sound = document.createElement ("audio")
+    bonk_sound.src = "sounds/BONK.mp3"
+    
+    const circle_element = document.getElementById ("circle_id")
+    circle_element.onpointerover = () => {
+        circle_element.src = "img/hex.png"
+    }
+    circle_element.onpointerout = () => {
+        circle_element.src = "img/cir.png"
+    }
+    circle_element.onpointerdown = () => {
+        bonk_sound.play ()
+    }
+</script>
