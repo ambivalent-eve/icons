@@ -121,8 +121,8 @@
 </script>
 
 <script>
-    const big_blow_sound = document.createElement ("audio")
-    big_blow_sound.src = "sounds/big_blow.mp3"
+    const bigblow_sound = document.createElement ("audio")
+    bigblow_sound.src = "sounds/bigblow.mp3"
     
     const nightmare_element = document.getElementById ("nightmare_id")
     nightmare_element.onpointerover = () => {
@@ -132,7 +132,7 @@
         nightmare_element.src = "img/06.png"
     }
     nightmare_element.onpointerdown = () => {
-        big_blow_sound.play ()
+        bigblow_sound.play ()
     }
 </script>
 
@@ -140,7 +140,7 @@
     const glass_sound = document.createElement ("audio")
     glass_sound.src = "sounds/Glass.mp3"
     
-    const arrow_element = document.getElementById ("desires_id")
+    const arrow_element = document.getElementById ("arrow_id")
     arrow_element.onpointerover = () => {
         arrow_element.src = "img/0702.png"
     }
@@ -172,7 +172,7 @@
     const owl_sound = document.createElement ("audio")
     owl_sound.src = "sounds/owl.mp3"
     
-    const visions_element = document.getElementById ("visions_id")
+    const visions_element = document.getElementById ("vision_id")
     visions_element.onpointerover = () => {
         visions_element.src = "img/0902.png"
     }
