@@ -26,7 +26,7 @@
 
         <div class="row">
             <div class="image-container"><img src="img/04.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/05.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="memories_id" src="img/05.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/06.png" height="200" width="200"/></div>
             </div>
 
@@ -54,6 +54,18 @@
     desires_element.onpointerdown = () => {
         beep_sound.play ()
     }
+</script>
+
+<script>
+    const click_sound = document.createElement ("audio")
+    click_sound.src = "sounds/Click.mp3"
+    
+    const visions_element = document.getElementById ("memories_id")
+    visions_element.onpointerdown = () => {
+        click_sound.play ()
+        setTimeout (() => {visions_element.src = "img/05.png"},1500)
+        visions_element.src = "img/0502.png"
+        
 </script>
 
 <script>
