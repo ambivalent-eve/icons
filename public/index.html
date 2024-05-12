@@ -61,11 +61,11 @@
     click_sound.src = "sounds/Click.mp3"
     
     const visions_element = document.getElementById ("memories_id")
-    visions_element.onpointerdown = () => {
+    memories_element.onpointerdown = () => {
+        memories_element.src = "img/0502.png"
         click_sound.play ()
         setTimeout (() => {visions_element.src = "img/05.png"},1500)
-        visions_element.src = "img/0502.png"
-        
+
 </script>
 
 <script>
