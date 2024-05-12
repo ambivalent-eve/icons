@@ -41,8 +41,8 @@
 </html>
 
 <script>
-    const bonk_sound = document.createElement ("audio")
-    bonk_sound.src = "sounds/BONK.mp3"
+    const beep_sound = document.createElement ("audio")
+    beep_sound.src = "sounds/beep.mp3"
     
     const desires_element = document.getElementById ("desires_id")
     desires_element.onpointerover = () => {
@@ -52,7 +52,7 @@
         desires_element.src = "img/01.png"
     }
     desires_element.onpointerdown = () => {
-        bonk_sound.play ()
+        beep_sound.play ()
     }
 </script>
 
@@ -71,3 +71,5 @@
         water_sound.play ()
     }
 </script>
+
+document.body.style.backgroundColor = `hsl(0, 0%, 0%)`
