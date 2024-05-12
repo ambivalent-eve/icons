@@ -20,20 +20,20 @@
 
         <div class="row">
             <div class="image-container"><img id="desires_id" src="img/01.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/02.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/03.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="walk_id" src="img/02.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="hallucinations_id" src="img/03.png" height="200" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/04.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="lucid_id" src="img/04.png" height="200" width="200"/></div>
             <div class="image-container"><img id="memories_id" src="img/05.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/06.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="nightmare_id" src="img/06.png" height="200" width="200"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/07.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="arrow_id" src="img/07.png" height="200" width="200"/></div>
             <div class="image-container"><img id="sleep_id" src="img/08.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/09.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="vision_id" src="img/09.png" height="200" width="200"/></div>
         </div>
         
     </body>
@@ -57,6 +57,54 @@
 </script>
 
 <script>
+    const breath_sound = document.createElement ("audio")
+    breath_sound.src = "sounds/Breath.mp3"
+    
+    const walk_element = document.getElementById ("walk_id")
+    walk_element.onpointerover = () => {
+        walk_element.src = "img/0202.png"
+    }
+    walk_element.onpointerout = () => {
+        walk_element.src = "img/02.png"
+    }
+    walk_element.onpointerdown = () => {
+        breath_sound.play ()
+    }
+</script>
+
+<script>
+    const insects_sound = document.createElement ("audio")
+    insects_sound.src = "sounds/insects.mp3"
+    
+    const hallucinations_element = document.getElementById ("hallucinations_id")
+    hallucinations_element.onpointerover = () => {
+        hallucinations_element.src = "img/0302.png"
+    }
+    hallucinations_element.onpointerout = () => {
+        hallucinations_element.src = "img/03.png"
+    }
+    hallucinations_element.onpointerdown = () => {
+        insects_sound.play ()
+    }
+</script>
+
+<script>
+    const bonk_sound = document.createElement ("audio")
+    bonk_sound.src = "sounds/BONK.mp3"
+    
+    const lucid_element = document.getElementById ("lucid_id")
+    lucid_element.onpointerover = () => {
+        lucid_element.src = "img/0402.png"
+    }
+    lucid_element.onpointerout = () => {
+        hallucinations_element.src = "img/04.png"
+    }
+    lucid_element.onpointerdown = () => {
+        bonk_sound.play ()
+    }
+</script>
+
+<script>
     const click_sound = document.createElement ("audio")
     click_sound.src = "sounds/Click.mp3"
     
@@ -73,6 +121,38 @@
 </script>
 
 <script>
+    const big_blow_sound = document.createElement ("audio")
+    big_blow_sound.src = "sounds/big_blow.mp3"
+    
+    const nightmare_element = document.getElementById ("nightmare_id")
+    nightmare_element.onpointerover = () => {
+        nightmare_element.src = "img/0602.png"
+    }
+    nightmare_element.onpointerout = () => {
+        nightmare_element.src = "img/06.png"
+    }
+    nightmare_element.onpointerdown = () => {
+        big_blow_sound.play ()
+    }
+</script>
+
+<script>
+    const glass_sound = document.createElement ("audio")
+    glass_sound.src = "sounds/Glass.mp3"
+    
+    const arrow_element = document.getElementById ("desires_id")
+    arrow_element.onpointerover = () => {
+        arrow_element.src = "img/0702.png"
+    }
+    arrow_element.onpointerout = () => {
+        arrow_element.src = "img/07.png"
+    }
+    arrow_element.onpointerdown = () => {
+        glass_sound.play ()
+    }
+</script>
+
+<script>
     const water_sound = document.createElement ("audio")
     water_sound.src = "sounds/water.mp3"
     
@@ -85,6 +165,22 @@
     }
     sleep_element.onpointerdown = () => {
         water_sound.play ()
+    }
+</script>
+
+<script>
+    const owl_sound = document.createElement ("audio")
+    owl_sound.src = "sounds/owl.mp3"
+    
+    const visions_element = document.getElementById ("visions_id")
+    visions_element.onpointerover = () => {
+        visions_element.src = "img/0902.png"
+    }
+    visions_element.onpointerout = () => {
+        visions_element.src = "img/09.png"
+    }
+    visions_element.onpointerdown = () => {
+        owl_sound.play ()
     }
 </script>
 
